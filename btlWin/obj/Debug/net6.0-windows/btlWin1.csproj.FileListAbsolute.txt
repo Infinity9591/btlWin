@@ -1,0 +1,184 @@
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\btlWin1.exe
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\btlWin1.deps.json
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\btlWin1.runtimeconfig.json
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\btlWin1.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\btlWin1.pdb
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\obj\Debug\net6.0-windows\btlWin1.csproj.AssemblyReference.cache
+D:\C# Project\btlWin - EFC6.0\btlWin\obj\Debug\net6.0-windows\btlWin.loginForm.resources
+D:\C# Project\btlWin - EFC6.0\btlWin\obj\Debug\net6.0-windows\btlWin1.Properties.Resources.resources
+D:\C# Project\btlWin - EFC6.0\btlWin\obj\Debug\net6.0-windows\btlWin.registerForm.resources
+D:\C# Project\btlWin - EFC6.0\btlWin\obj\Debug\net6.0-windows\btlWin.start.resources
+D:\C# Project\btlWin - EFC6.0\btlWin\obj\Debug\net6.0-windows\btlWin1.csproj.GenerateResource.cache
+D:\C# Project\btlWin - EFC6.0\btlWin\obj\Debug\net6.0-windows\btlWin1.GeneratedMSBuildEditorConfig.editorconfig
+D:\C# Project\btlWin - EFC6.0\btlWin\obj\Debug\net6.0-windows\btlWin1.AssemblyInfoInputs.cache
+D:\C# Project\btlWin - EFC6.0\btlWin\obj\Debug\net6.0-windows\btlWin1.AssemblyInfo.cs
+D:\C# Project\btlWin - EFC6.0\btlWin\obj\Debug\net6.0-windows\btlWin1.csproj.CoreCompileInputs.cache
+D:\C# Project\btlWin - EFC6.0\btlWin\obj\Debug\net6.0-windows\btlWin1.csproj.CopyComplete
+D:\C# Project\btlWin - EFC6.0\btlWin\obj\Debug\net6.0-windows\btlWin1.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\obj\Debug\net6.0-windows\refint\btlWin1.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\obj\Debug\net6.0-windows\btlWin1.pdb
+D:\C# Project\btlWin - EFC6.0\btlWin\obj\Debug\net6.0-windows\btlWin1.genruntimeconfig.cache
+D:\C# Project\btlWin - EFC6.0\btlWin\obj\Debug\net6.0-windows\ref\btlWin1.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Binder.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.CommandLine.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Json.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.UserSecrets.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Hosting.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Configuration.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Console.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Debug.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.EventLog.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.EventSource.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\System.Diagnostics.DiagnosticSource.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\System.Diagnostics.EventLog.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\System.Text.Encodings.Web.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\System.Text.Json.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+D:\C# Project\btlWin - EFC6.0\btlWin\obj\Debug\net6.0-windows\btlWin1.main.resources
+D:\C# Project\btlWin - EFC6.0\btlWin\obj\Debug\net6.0-windows\btlWin1.branch.resources
+D:\C# Project\btlWin - EFC6.0\btlWin\obj\Debug\net6.0-windows\btlWin1.addBranch.resources
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\btlWin1.exe
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\btlWin1.deps.json
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\btlWin1.runtimeconfig.json
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\btlWin1.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\btlWin1.pdb
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.CommandLine.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.UserSecrets.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Hosting.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Configuration.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Console.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Debug.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.EventLog.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.EventSource.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\System.Diagnostics.DiagnosticSource.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\System.Diagnostics.EventLog.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\System.Text.Encodings.Web.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\System.Text.Json.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\obj\Debug\net6.0-windows\btlWin1.csproj.AssemblyReference.cache
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\obj\Debug\net6.0-windows\btlWin.loginForm.resources
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\obj\Debug\net6.0-windows\btlWin1.main.resources
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\obj\Debug\net6.0-windows\btlWin1.Properties.Resources.resources
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\obj\Debug\net6.0-windows\btlWin.registerForm.resources
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\obj\Debug\net6.0-windows\btlWin.start.resources
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\obj\Debug\net6.0-windows\btlWin1.csproj.GenerateResource.cache
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\obj\Debug\net6.0-windows\btlWin1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\obj\Debug\net6.0-windows\btlWin1.AssemblyInfoInputs.cache
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\obj\Debug\net6.0-windows\btlWin1.AssemblyInfo.cs
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\obj\Debug\net6.0-windows\btlWin1.csproj.CoreCompileInputs.cache
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\obj\Debug\net6.0-windows\btlWin1.csproj.CopyComplete
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\obj\Debug\net6.0-windows\btlWin1.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\obj\Debug\net6.0-windows\refint\btlWin1.dll
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\obj\Debug\net6.0-windows\btlWin1.pdb
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\obj\Debug\net6.0-windows\btlWin1.genruntimeconfig.cache
+C:\Users\phanly's\Source\Repos\btlWin\btlWin\obj\Debug\net6.0-windows\ref\btlWin1.dll
+C:\Users\phanly's\source\repos\btlWin\btlWin\obj\Debug\net6.0-windows\btlWin1.add.resources
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\btlWin1.exe
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\btlWin1.deps.json
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\btlWin1.runtimeconfig.json
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\btlWin1.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\btlWin1.pdb
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Binder.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.CommandLine.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Json.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.UserSecrets.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Hosting.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Configuration.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Console.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Debug.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.EventLog.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.EventSource.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\System.Diagnostics.DiagnosticSource.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\System.Diagnostics.EventLog.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\System.Text.Encodings.Web.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\System.Text.Json.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll
+D:\C# Project\btlWin\btlWin\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+D:\C# Project\btlWin\btlWin\obj\Debug\net6.0-windows\btlWin1.csproj.AssemblyReference.cache
+D:\C# Project\btlWin\btlWin\obj\Debug\net6.0-windows\btlWin1.add.resources
+D:\C# Project\btlWin\btlWin\obj\Debug\net6.0-windows\btlWin.loginForm.resources
+D:\C# Project\btlWin\btlWin\obj\Debug\net6.0-windows\btlWin1.main.resources
+D:\C# Project\btlWin\btlWin\obj\Debug\net6.0-windows\btlWin1.Properties.Resources.resources
+D:\C# Project\btlWin\btlWin\obj\Debug\net6.0-windows\btlWin.registerForm.resources
+D:\C# Project\btlWin\btlWin\obj\Debug\net6.0-windows\btlWin.start.resources
+D:\C# Project\btlWin\btlWin\obj\Debug\net6.0-windows\btlWin1.csproj.GenerateResource.cache
+D:\C# Project\btlWin\btlWin\obj\Debug\net6.0-windows\btlWin1.GeneratedMSBuildEditorConfig.editorconfig
+D:\C# Project\btlWin\btlWin\obj\Debug\net6.0-windows\btlWin1.AssemblyInfoInputs.cache
+D:\C# Project\btlWin\btlWin\obj\Debug\net6.0-windows\btlWin1.AssemblyInfo.cs
+D:\C# Project\btlWin\btlWin\obj\Debug\net6.0-windows\btlWin1.csproj.CoreCompileInputs.cache
+D:\C# Project\btlWin\btlWin\obj\Debug\net6.0-windows\btlWin1.csproj.CopyComplete
+D:\C# Project\btlWin\btlWin\obj\Debug\net6.0-windows\btlWin1.dll
+D:\C# Project\btlWin\btlWin\obj\Debug\net6.0-windows\refint\btlWin1.dll
+D:\C# Project\btlWin\btlWin\obj\Debug\net6.0-windows\btlWin1.pdb
+D:\C# Project\btlWin\btlWin\obj\Debug\net6.0-windows\btlWin1.genruntimeconfig.cache
+D:\C# Project\btlWin\btlWin\obj\Debug\net6.0-windows\ref\btlWin1.dll
