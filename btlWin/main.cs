@@ -25,7 +25,6 @@ namespace btlWin1
             InitializeComponent();
             string s = File.ReadAllText(filename);
             con = new SqlConnection(s);
-
         }
 
         private void main_Load(object sender, EventArgs e)
@@ -96,6 +95,11 @@ namespace btlWin1
             foreach (DateTimePicker i in grbthongtin.Controls.OfType<DateTimePicker>())
             {
                 i.Enabled = false;
+            }
+
+            foreach (TextBoxBase i in groupBox3.Controls.OfType<TextBoxBase>())
+            {
+                i.ReadOnly = true;
             }
 
             dateTimePickerBirth.CustomFormat = "dd/MM/yyyy";
@@ -710,6 +714,65 @@ namespace btlWin1
             txtGPA.Clear();
             main_Load(sender, e);
 
+        }
+
+        private void btnClassUpdate_Click(object sender, EventArgs e)
+        {
+            foreach (TextBoxBase i in groupBox3.Controls.OfType<TextBoxBase>())
+            {
+                if (i.Name != "txtNumberSV" && i.Name != "txtClassSTT" && i.Name != "txtClassID")
+                {
+                    i.ReadOnly = false;
+                }
+            }
+            btnClassSave.Enabled = true;
+        }
+
+        private void btnClassSave_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmdUpdateClass = new SqlCommand();
+            cmdUpdateClass.Connection = con;
+            string strName = txtClassName.Text.ToString();
+            string strBranch = txtClassMa.Text.ToString();
+            string strID = txtClassID.Text.ToString();
+            cmdUpdateClass.CommandText = "SELECT * FROM [Class] WHERE ID = '" + strID + "'";
+            dr = cmdUpdateClass.ExecuteReader();
+
+            if (dr.Read())
+            {
+                dr.Close();
+                SqlCommand command = new SqlCommand();
+                command.Connection = con;
+                command.CommandText = "UPDATE [Class] SET ClassName = N'" + strName + "', BranchName = N'" + strBranch + "' WHERE ID = '" + strID + "'";
+                command.ExecuteNonQuery();
+                MessageBox.Show("Cập nhật thành công!", "Success", MessageBoxButtons.OK);
+            }
+            con.Close();
+
+            txtClassMa.Text = string.Empty;
+            txtClassName.Text = string.Empty;
+            txtClassID.Text = string.Empty;
+            txtClassSTT.Text = string.Empty;
+            main_Load(sender, e);
+        }
+
+        private void btnClassRefresh_Click(object sender, EventArgs e)
+        {
+            txtClassMa.Text = string.Empty;
+            txtClassName.Text = string.Empty;
+            txtClassID.Text = string.Empty;
+            txtClassSTT.Text = string.Empty;
+            main_Load(sender, e);
+        }
+
+        private void btnClassCancel_Click(object sender, EventArgs e)
+        {
+            txtClassMa.Text = string.Empty;
+            txtClassName.Text = string.Empty;
+            txtClassID.Text = string.Empty;
+            txtClassSTT.Text = string.Empty;
+            main_Load(sender, e);
         }
     }
 }

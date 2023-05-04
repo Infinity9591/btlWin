@@ -767,6 +767,7 @@
             btnClassRefresh.TabIndex = 0;
             btnClassRefresh.Text = "Refresh";
             btnClassRefresh.UseVisualStyleBackColor = true;
+            btnClassRefresh.Click += btnClassRefresh_Click;
             btnClassRefresh.MouseHover += btnClassRefresh_MouseHover;
             // 
             // gridviewClass
@@ -808,6 +809,7 @@
             btnClassCancel.TabIndex = 0;
             btnClassCancel.Text = "Hủy";
             btnClassCancel.UseVisualStyleBackColor = true;
+            btnClassCancel.Click += btnClassCancel_Click;
             btnClassCancel.MouseHover += btnClassCancel_MouseHover;
             // 
             // btnClassUpdate
@@ -818,6 +820,7 @@
             btnClassUpdate.TabIndex = 0;
             btnClassUpdate.Text = "Sửa";
             btnClassUpdate.UseVisualStyleBackColor = true;
+            btnClassUpdate.Click += btnClassUpdate_Click;
             btnClassUpdate.MouseHover += btnClassUpdate_MouseHover;
             // 
             // btnClassSave
@@ -828,6 +831,7 @@
             btnClassSave.TabIndex = 0;
             btnClassSave.Text = "Lưu";
             btnClassSave.UseVisualStyleBackColor = true;
+            btnClassSave.Click += btnClassSave_Click;
             btnClassSave.MouseHover += btnClassSave_MouseHover;
             // 
             // main
