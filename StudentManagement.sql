@@ -19,9 +19,7 @@ CREATE TABLE Class
 (
 	ID int primary key,
     ClassName nvarchar(50) not null,
-	BranchName nvarchar(100) not null,
-
-	--AcademicYear varchar(20)
+	BranchName nvarchar(100) not null
 )
 GO
 DROP TABLE IF EXISTS Student
@@ -54,7 +52,7 @@ INSERT INTO Student VALUES (90435, N'Nguyễn Thành Đạt', N'Nữ', '20220102
 drop view if EXISTS classview 
 go
 create view classview as
-select ID as N'ID Lớp', BranchName as N'Tên Lớp', ClassName as N'Mã Lớp'
+select ID as N'STT', ClassName as N'Tên Lớp' , BranchName as N'Tên Ngành'
 from Class
 go
 
