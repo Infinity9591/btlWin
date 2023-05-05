@@ -44,30 +44,43 @@ namespace btlWin
                 errorProvider1.Clear();
                 errorProvider1 = new ErrorProvider();
                 errorProvider1.SetError(txtUsername, "Nhập tên đăng nhập đi nào");
+                txtError.Text = string.Empty;
             }
             else if (txtPassword.Text == "")
             {
                 errorProvider1.Clear();
                 errorProvider1 = new ErrorProvider();
+                errorProvider1.SetIconPadding(txtPassword, txtUsername.Width - txtPassword.Width + 8);
                 errorProvider1.SetError(txtPassword, "Nhập mật khẩu đi nào");
+                txtError.Text = string.Empty;
+
             }
             else if (txtPassword.Text.Length < 6)
             {
                 errorProvider1.Clear();
                 errorProvider1 = new ErrorProvider();
+                errorProvider1.SetIconPadding(txtPassword, txtUsername.Width - txtPassword.Width + 8);
                 errorProvider1.SetError(txtPassword, "Mật khẩu không nhỏ hơn 6 kí tự");
+                txtError.Text = string.Empty;
+
             }
             else if (txtRepeatPassword.Text == "")
             {
                 errorProvider1.Clear();
                 errorProvider1 = new ErrorProvider();
+                errorProvider1.SetIconPadding(txtRepeatPassword, txtUsername.Width - txtPassword.Width + 8);
                 errorProvider1.SetError(txtRepeatPassword, "Nhập mật khẩu đi nào");
+                txtError.Text = string.Empty;
+
             }
             else if (txtPassword.Text != txtRepeatPassword.Text)
             {
                 errorProvider1.Clear();
                 errorProvider1 = new ErrorProvider();
+                errorProvider1.SetIconPadding(txtRepeatPassword, txtUsername.Width - txtPassword.Width + 8);
                 errorProvider1.SetError(txtRepeatPassword, "Mật khẩu nhập lại không đúng");
+                txtError.Text = string.Empty;
+
             }
             else
             {

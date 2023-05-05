@@ -118,6 +118,8 @@ namespace btlWin1
             dateTimePickerBirthTo.Format = DateTimePickerFormat.Custom;
             btnSave.Enabled = false;
             txtSearch.Enabled = false;
+            label15.Hide();
+            label21.Hide();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -318,7 +320,8 @@ namespace btlWin1
                 cBoxGPAFrom.Hide();
                 cBoxGPATo.Hide();
                 txtSearch.Enabled = true;
-
+                label15.Hide();
+                label21.Hide();
             }
             else if (strFilter == "Tên")
             {
@@ -333,7 +336,8 @@ namespace btlWin1
                 cBoxGPAFrom.Hide();
                 cBoxGPATo.Hide();
                 txtSearch.Enabled = true;
-
+                label15.Hide();
+                label21.Hide();
             }
             else if (strFilter == "Giới tính")
             {
@@ -349,7 +353,8 @@ namespace btlWin1
                 cBoxSearchClass.Hide();
                 cBoxGPAFrom.Hide();
                 cBoxGPATo.Hide();
-
+                label15.Hide();
+                label21.Hide();
             }
             else if (strFilter == "Ngày sinh")
             {
@@ -365,7 +370,8 @@ namespace btlWin1
                 cBoxSearchClass.Hide();
                 cBoxGPAFrom.Hide();
                 cBoxGPATo.Hide();
-
+                label15.Hide();
+                label21.Hide();
             }
             else if (strFilter == "Số điện thoại")
             {
@@ -380,7 +386,8 @@ namespace btlWin1
                 cBoxGPAFrom.Hide();
                 cBoxGPATo.Hide();
                 txtSearch.Enabled = true;
-
+                label15.Hide();
+                label21.Hide();
             }
             else if (strFilter == "Email")
             {
@@ -393,7 +400,8 @@ namespace btlWin1
                 cBoxGPAFrom.Hide();
                 cBoxGPATo.Hide();
                 txtSearch.Enabled = true;
-
+                label15.Hide();
+                label21.Hide();
             }
             else if (strFilter == "Địa chỉ")
             {
@@ -408,7 +416,8 @@ namespace btlWin1
                 cBoxGPAFrom.Hide();
                 cBoxGPATo.Hide();
                 txtSearch.Enabled = true;
-
+                label15.Hide();
+                label21.Hide();
             }
             else if (strFilter == "Lớp")
             {
@@ -420,6 +429,8 @@ namespace btlWin1
                 cBoxSearchClass.Show();
                 cBoxGPAFrom.Hide();
                 cBoxGPATo.Hide();
+                label15.Hide();
+                label21.Hide();
             }
             else if (strFilter == "Khoa")
             {
@@ -435,6 +446,8 @@ namespace btlWin1
                 cBoxSearchClass.Hide();
                 cBoxGPAFrom.Hide();
                 cBoxGPATo.Hide();
+                label15.Hide();
+                label21.Hide();
             }
             else if (strFilter == "Điểm trung bình")
             {
@@ -446,19 +459,19 @@ namespace btlWin1
                 cBoxGPATo.Show();
                 txtSearch.Hide();
                 cBoxSearch.Hide();
-                cBoxGPAFrom.Items.Add(">=0");
-                cBoxGPAFrom.Items.Add(">=3");
-                cBoxGPAFrom.Items.Add(">=5");
-                cBoxGPAFrom.Items.Add(">=6.5");
-                cBoxGPAFrom.Items.Add(">=8");
-                cBoxGPATo.Items.Add("<=3");
-                cBoxGPATo.Items.Add("<=5");
-                cBoxGPATo.Items.Add("<=6.5");
-                cBoxGPATo.Items.Add("<=8");
-                cBoxGPATo.Items.Add("<=10");
+                cBoxGPAFrom.Items.Add("0");
+                cBoxGPAFrom.Items.Add("3");
+                cBoxGPAFrom.Items.Add("5");
+                cBoxGPAFrom.Items.Add("6.5");
+                cBoxGPAFrom.Items.Add("8");
+                cBoxGPATo.Items.Add("3");
+                cBoxGPATo.Items.Add("5");
+                cBoxGPATo.Items.Add("6.5");
+                cBoxGPATo.Items.Add("8");
+                cBoxGPATo.Items.Add("10");
+                label15.Show();
+                label21.Show();
             }
-
-
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
@@ -561,31 +574,22 @@ namespace btlWin1
             con.Close();
         }
 
-        string strGPAFrom = "", strGPATo = "";
-        char[] chFrom, chTo;
+        float GPAFrom , GPATo ;
         private void cBoxGPAFrom_SelectedIndexChanged(object sender, EventArgs e)
         {
             con.Open();
-            chFrom = cBoxGPAFrom.Text.ToString().ToCharArray();
-            for (int i = 2; i < chFrom.Length; i++)
-            {
-                strGPAFrom += chFrom[i];
-            }
+            GPAFrom = float.Parse(cBoxGPAFrom.Text.ToString());
             DataTable dtSearch = new DataTable();
-            if (cBoxGPATo.Text == String.Empty)
+            if (cBoxGPATo.Text == string.Empty)
             {
-                SqlDataAdapter daSearch = new SqlDataAdapter("SELECT * FROM studentview WHERE [Điểm trung bình] >= " + strGPAFrom, con);
+                SqlDataAdapter daSearch = new SqlDataAdapter("SELECT * FROM studentview WHERE [Điểm trung bình] >= " + GPAFrom, con);
                 daSearch.Fill(dtSearch);
                 gridviewdssv.DataSource = dtSearch;
             }
             else
             {
-                chTo = cBoxGPATo.Text.ToString().ToCharArray();
-                for (int i = 2; i < chFrom.Length; i++)
-                {
-                    strGPATo += chTo[i];
-                }
-                SqlDataAdapter daSearch = new SqlDataAdapter("SELECT * FROM studentview WHERE [Điểm trung bình] >= " + strGPAFrom + " AND [Điểm trung bình] <=" + strGPATo, con);
+                GPATo = float.Parse(cBoxGPATo.Text.ToString());
+                SqlDataAdapter daSearch = new SqlDataAdapter("SELECT * FROM studentview WHERE [Điểm trung bình] >= " + GPAFrom + " AND [Điểm trung bình] <=" + GPATo, con);
                 daSearch.Fill(dtSearch);
                 gridviewdssv.DataSource = dtSearch;
             }
@@ -595,26 +599,18 @@ namespace btlWin1
         private void cBoxGPATo_SelectedIndexChanged(object sender, EventArgs e)
         {
             con.Open();
-            chTo = cBoxGPATo.Text.ToString().ToCharArray();
-            for (int i = 2; i < chTo.Length; i++)
-            {
-                strGPATo += chTo[i];
-            }
+            GPATo = float.Parse(cBoxGPATo.Text.ToString());
             DataTable dtSearch = new DataTable();
-            if (cBoxGPAFrom.Text == String.Empty)
+            if (cBoxGPAFrom.Text == string.Empty)
             {
-                SqlDataAdapter daSearch = new SqlDataAdapter("SELECT * FROM studentview WHERE [Điểm trung bình] <= " + strGPATo, con);
+                SqlDataAdapter daSearch = new SqlDataAdapter("SELECT * FROM studentview WHERE [Điểm trung bình] <= " + GPATo, con);
                 daSearch.Fill(dtSearch);
                 gridviewdssv.DataSource = dtSearch;
             }
             else
             {
-                chFrom = cBoxGPAFrom.Text.ToString().ToCharArray();
-                for (int i = 2; i < chFrom.Length; i++)
-                {
-                    strGPAFrom += chFrom[i];
-                }
-                SqlDataAdapter daSearch = new SqlDataAdapter("SELECT * FROM studentview WHERE [Điểm trung bình] >= " + strGPAFrom + " AND [Điểm trung bình] <=" + strGPATo, con);
+                GPAFrom = float.Parse(cBoxGPAFrom.Text.ToString());
+                SqlDataAdapter daSearch = new SqlDataAdapter("SELECT * FROM studentview WHERE [Điểm trung bình] >= " + GPAFrom + " AND [Điểm trung bình] <=" + GPATo, con);
                 daSearch.Fill(dtSearch);
                 gridviewdssv.DataSource = dtSearch;
             }
@@ -628,11 +624,11 @@ namespace btlWin1
             if (e.RowIndex >= 0)
             {
                 gridviewClass.CurrentRow.Selected = true;
-                txtClassSTT.Text = (e.RowIndex + 1).ToString();
+                //txtClassSTT.Text = (e.RowIndex + 1).ToString();
                 txtClassID.Text = gridviewClass.Rows[e.RowIndex].Cells[0].Value.ToString();
                 txtClassName.Text = gridviewClass.Rows[e.RowIndex].Cells[1].Value.ToString();
                 txtClassMa.Text = gridviewClass.Rows[e.RowIndex].Cells[2].Value.ToString();
-                string currentbrand = gridviewClass.Rows[e.RowIndex].Cells["Mã Lớp"].Value.ToString();
+                string currentbrand = gridviewClass.Rows[e.RowIndex].Cells["Tên Lớp"].Value.ToString();
 
                 SqlCommand dem = new SqlCommand("select coalesce ((select COUNT(*) from class inner join student on Class.ID = Student.ClassID where ClassName = '" + currentbrand + "' group by ClassName), 0)", con);
 
@@ -753,7 +749,7 @@ namespace btlWin1
             txtClassMa.Text = string.Empty;
             txtClassName.Text = string.Empty;
             txtClassID.Text = string.Empty;
-            txtClassSTT.Text = string.Empty;
+            //txtClassSTT.Text = string.Empty;
             main_Load(sender, e);
         }
 
@@ -762,7 +758,7 @@ namespace btlWin1
             txtClassMa.Text = string.Empty;
             txtClassName.Text = string.Empty;
             txtClassID.Text = string.Empty;
-            txtClassSTT.Text = string.Empty;
+            //txtClassSTT.Text = string.Empty;
             main_Load(sender, e);
         }
 
@@ -771,8 +767,65 @@ namespace btlWin1
             txtClassMa.Text = string.Empty;
             txtClassName.Text = string.Empty;
             txtClassID.Text = string.Empty;
-            txtClassSTT.Text = string.Empty;
+            //txtClassSTT.Text = string.Empty;
             main_Load(sender, e);
+        }
+
+        private void btnclassadd_Click(object sender, EventArgs e)
+        {
+            classAdd classAdd = new classAdd();
+            classAdd.ShowDialog();
+        }
+
+        private void txtClassName_TextChanged(object sender, EventArgs e)
+        {
+            string? strName = txtClassName.Text;
+            char[] ch = strName.ToCharArray();
+            string check = "";
+            if (strName.Length > 3)
+            {
+                for (int i = 0; i < 3; i++)
+                {
+                    check += ch[i];
+                }
+            }
+            if (strName.Length > 3)
+            {
+                if (check == "CNT")
+                {
+                    txtClassMa.Text = "Công Nghệ Thông Tin";
+                }
+                if (check == "KPM")
+                {
+                    txtClassMa.Text = "Công Nghệ Phần Mềm";
+                }
+                if (check == "TTM")
+                {
+                    txtClassMa.Text = "Truyền thông & Mạng máy tính";
+                }
+            }
+        }
+
+        private void btnClassDel_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+                cmd.CommandType = CommandType.Text;
+                int r = gridviewClass.CurrentCell.RowIndex;
+                string strName = gridviewClass.Rows[r].Cells[1].Value.ToString();
+                cmd.CommandText = "DELETE FROM [Class] WHERE ClassName = '" + strName + "'";
+                cmd.ExecuteNonQuery();
+                main_Load(sender, e);
+            }
+            catch (SqlException)
+            {
+
+                MessageBox.Show("Có lỗi xảy ra. Vui lòng kiểm tra lại", "Thông báo");
+            }
+            con.Close();
         }
     }
 }

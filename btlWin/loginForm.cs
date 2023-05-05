@@ -49,7 +49,7 @@ namespace btlWin
                 errorProvider1 = new ErrorProvider();
                 errorProvider1.SetIconPadding(txtUsername, 8);
                 errorProvider1.SetError(txtUsername, "Nhập tên đăng nhập đi nào");
-
+                labelError.Text = string.Empty;
                 txtUsername.Focus();
             }
             else if (txtPassword.Text == "")
@@ -58,6 +58,7 @@ namespace btlWin
                 errorProvider1 = new ErrorProvider();
                 errorProvider1.SetIconPadding(txtPassword, txtUsername.Width - txtPassword.Width + 8);
                 errorProvider1.SetError(txtPassword, "Nhập mật khẩu đi nào");
+                labelError.Text = string.Empty;
                 txtPassword.Focus();
             }
             else
@@ -83,7 +84,7 @@ namespace btlWin
             }
         }
 
-        private void btnshow_Click_1(object sender, EventArgs e)
+        private void btnshow_Click(object sender, EventArgs e)
         {
             if (txtPassword.PasswordChar == '*')
             {
@@ -92,7 +93,7 @@ namespace btlWin
             }
         }
 
-        private void btnhide_Click_1(object sender, EventArgs e)
+        private void btnhide_Click(object sender, EventArgs e)
         {
             if (txtPassword.PasswordChar == '\0')
             {
@@ -101,17 +102,12 @@ namespace btlWin
             }
         }
 
-        private void labelToRegister_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        private void labelToRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             registerForm registerForm = new registerForm();
             this.Hide();
             registerForm.ShowDialog();
             this.Close();
-        }
-
-        private void loginForm_Load_1(object sender, EventArgs e)
-        {
-
         }
     }
 }

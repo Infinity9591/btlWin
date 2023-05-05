@@ -27,9 +27,9 @@ namespace btlWin1
                 cBoxClass.ValueMember = "Class";
                 cBoxClass.DataSource = dtClass;
             }
-            catch 
-            { 
-            
+            catch
+            {
+
             }
             dateTimePickerBirth.CustomFormat = "dd/MM/yyyy";
             dateTimePickerBirth.Format = DateTimePickerFormat.Custom;

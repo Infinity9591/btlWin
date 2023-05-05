@@ -83,10 +83,8 @@
             label17 = new Label();
             label16 = new Label();
             label20 = new Label();
-            label15 = new Label();
             txtClassID = new TextBox();
             txtNumberSV = new TextBox();
-            txtClassSTT = new TextBox();
             txtClassMa = new TextBox();
             txtClassName = new TextBox();
             groupBox2 = new GroupBox();
@@ -99,6 +97,8 @@
             btnClassCancel = new Button();
             btnClassUpdate = new Button();
             btnClassSave = new Button();
+            label15 = new Label();
+            label21 = new Label();
             grbdanhsach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)gridviewdssv).BeginInit();
             grbchucnang.SuspendLayout();
@@ -527,6 +527,8 @@
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(label21);
+            tabPage1.Controls.Add(label15);
             tabPage1.Controls.Add(cBoxGPATo);
             tabPage1.Controls.Add(cBoxGPAFrom);
             tabPage1.Controls.Add(cBoxSearchClass);
@@ -560,6 +562,7 @@
             cBoxGPATo.Name = "cBoxGPATo";
             cBoxGPATo.Size = new Size(84, 23);
             cBoxGPATo.TabIndex = 11;
+            cBoxGPATo.SelectedIndexChanged += cBoxGPATo_SelectedIndexChanged;
             // 
             // cBoxGPAFrom
             // 
@@ -568,6 +571,7 @@
             cBoxGPAFrom.Name = "cBoxGPAFrom";
             cBoxGPAFrom.Size = new Size(86, 23);
             cBoxGPAFrom.TabIndex = 12;
+            cBoxGPAFrom.SelectedIndexChanged += cBoxGPAFrom_SelectedIndexChanged;
             // 
             // cBoxSearchClass
             // 
@@ -624,10 +628,8 @@
             groupBox3.Controls.Add(label17);
             groupBox3.Controls.Add(label16);
             groupBox3.Controls.Add(label20);
-            groupBox3.Controls.Add(label15);
             groupBox3.Controls.Add(txtClassID);
             groupBox3.Controls.Add(txtNumberSV);
-            groupBox3.Controls.Add(txtClassSTT);
             groupBox3.Controls.Add(txtClassMa);
             groupBox3.Controls.Add(txtClassName);
             groupBox3.Location = new Point(216, 49);
@@ -640,16 +642,16 @@
             // label18
             // 
             label18.AutoSize = true;
-            label18.Location = new Point(540, 68);
+            label18.Location = new Point(427, 61);
             label18.Name = "label18";
-            label18.Size = new Size(47, 15);
+            label18.Size = new Size(64, 15);
             label18.TabIndex = 4;
-            label18.Text = "Mã Lớp";
+            label18.Text = "Tên Ngành";
             // 
             // label17
             // 
             label17.AutoSize = true;
-            label17.Location = new Point(280, 68);
+            label17.Location = new Point(242, 61);
             label17.Name = "label17";
             label17.Size = new Size(51, 15);
             label17.TabIndex = 4;
@@ -658,7 +660,7 @@
             // label16
             // 
             label16.AutoSize = true;
-            label16.Location = new Point(132, 68);
+            label16.Location = new Point(94, 61);
             label16.Name = "label16";
             label16.Size = new Size(41, 15);
             label16.TabIndex = 4;
@@ -667,24 +669,15 @@
             // label20
             // 
             label20.AutoSize = true;
-            label20.Location = new Point(729, 68);
+            label20.Location = new Point(691, 61);
             label20.Name = "label20";
             label20.Size = new Size(73, 15);
             label20.TabIndex = 4;
             label20.Text = "Số Lương SV";
             // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Location = new Point(28, 68);
-            label15.Name = "label15";
-            label15.Size = new Size(25, 15);
-            label15.TabIndex = 4;
-            label15.Text = "STT";
-            // 
             // txtClassID
             // 
-            txtClassID.Location = new Point(132, 86);
+            txtClassID.Location = new Point(94, 79);
             txtClassID.Name = "txtClassID";
             txtClassID.Size = new Size(94, 23);
             txtClassID.TabIndex = 3;
@@ -692,35 +685,28 @@
             // 
             // txtNumberSV
             // 
-            txtNumberSV.Location = new Point(729, 86);
+            txtNumberSV.Location = new Point(691, 79);
             txtNumberSV.Name = "txtNumberSV";
             txtNumberSV.Size = new Size(95, 23);
             txtNumberSV.TabIndex = 2;
             txtNumberSV.TextAlign = HorizontalAlignment.Center;
             // 
-            // txtClassSTT
-            // 
-            txtClassSTT.Location = new Point(28, 86);
-            txtClassSTT.Name = "txtClassSTT";
-            txtClassSTT.Size = new Size(58, 23);
-            txtClassSTT.TabIndex = 2;
-            txtClassSTT.TextAlign = HorizontalAlignment.Center;
-            // 
             // txtClassMa
             // 
-            txtClassMa.Location = new Point(540, 86);
+            txtClassMa.Location = new Point(427, 79);
             txtClassMa.Name = "txtClassMa";
-            txtClassMa.Size = new Size(144, 23);
+            txtClassMa.Size = new Size(219, 23);
             txtClassMa.TabIndex = 1;
             txtClassMa.TextAlign = HorizontalAlignment.Center;
             // 
             // txtClassName
             // 
-            txtClassName.Location = new Point(280, 86);
+            txtClassName.Location = new Point(242, 79);
             txtClassName.Name = "txtClassName";
-            txtClassName.Size = new Size(205, 23);
+            txtClassName.Size = new Size(132, 23);
             txtClassName.TabIndex = 0;
             txtClassName.TextAlign = HorizontalAlignment.Center;
+            txtClassName.TextChanged += txtClassName_TextChanged;
             // 
             // groupBox2
             // 
@@ -789,6 +775,7 @@
             btnClassDel.TabIndex = 0;
             btnClassDel.Text = "Xóa";
             btnClassDel.UseVisualStyleBackColor = true;
+            btnClassDel.Click += btnClassDel_Click;
             btnClassDel.MouseHover += btnClassDel_MouseHover;
             // 
             // btnclassadd
@@ -799,6 +786,7 @@
             btnclassadd.TabIndex = 0;
             btnclassadd.Text = "Thêm";
             btnclassadd.UseVisualStyleBackColor = true;
+            btnclassadd.Click += btnclassadd_Click;
             btnclassadd.MouseHover += btnclassadd_MouseHover;
             // 
             // btnClassCancel
@@ -833,6 +821,24 @@
             btnClassSave.UseVisualStyleBackColor = true;
             btnClassSave.Click += btnClassSave_Click;
             btnClassSave.MouseHover += btnClassSave_MouseHover;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Location = new Point(1237, 12);
+            label15.Name = "label15";
+            label15.Size = new Size(54, 15);
+            label15.TabIndex = 13;
+            label15.Text = "Nhỏ hơn";
+            // 
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.Location = new Point(1145, 12);
+            label21.Name = "label21";
+            label21.Size = new Size(51, 15);
+            label21.TabIndex = 13;
+            label21.Text = "Lớn hơn";
             // 
             // main
             // 
@@ -915,10 +921,6 @@
         private GroupBox groupBox3;
         private Label label18;
         private Label label17;
-        private Label label16;
-        private Label label15;
-        private TextBox txtClassID;
-        private TextBox txtClassSTT;
         private TextBox txtClassMa;
         private TextBox txtClassName;
         private GroupBox groupBox2;
@@ -934,5 +936,9 @@
         private Label label20;
         private TextBox txtNumberSV;
         private Button btnCancel;
+        private Label label16;
+        private TextBox txtClassID;
+        private Label label21;
+        private Label label15;
     }
 }

@@ -100,7 +100,7 @@
             this.labelToRegister.TabIndex = 12;
             this.labelToRegister.TabStop = true;
             this.labelToRegister.Text = "Đăng kí ngay";
-            this.labelToRegister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.labelToRegister_LinkClicked_1);
+            this.labelToRegister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.labelToRegister_LinkClicked);
             // 
             // txtUsername
             // 
@@ -132,7 +132,7 @@
             this.btnhide.TabIndex = 15;
             this.btnhide.Text = "H";
             this.btnhide.UseVisualStyleBackColor = true;
-            this.btnhide.Click += new System.EventHandler(this.btnhide_Click_1);
+            this.btnhide.Click += new System.EventHandler(this.btnhide_Click);
             // 
             // btnshow
             // 
@@ -143,7 +143,7 @@
             this.btnshow.TabIndex = 16;
             this.btnshow.Text = "S";
             this.btnshow.UseVisualStyleBackColor = true;
-            this.btnshow.Click += new System.EventHandler(this.btnshow_Click_1);
+            this.btnshow.Click += new System.EventHandler(this.btnshow_Click);
             // 
             // loginForm
             // 
@@ -163,7 +163,7 @@
             this.Controls.Add(this.txtUsername);
             this.Name = "loginForm";
             this.Text = "Đăng nhập";
-            this.Load += new System.EventHandler(this.loginForm_Load_1);
+            this.Load += new System.EventHandler(this.loginForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
