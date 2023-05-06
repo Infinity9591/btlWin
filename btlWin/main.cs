@@ -117,6 +117,9 @@ namespace btlWin1
             dateTimePickerBirthTo.CustomFormat = "dd/MM/yyyy";
             dateTimePickerBirthTo.Format = DateTimePickerFormat.Custom;
             btnSave.Enabled = false;
+            btnCancel.Enabled = false;
+            btnClassCancel.Enabled = false;
+            btnClassSave.Enabled = false;
             txtSearch.Enabled = false;
             label15.Hide();
             label21.Hide();
@@ -164,25 +167,27 @@ namespace btlWin1
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            foreach (TextBoxBase i in grbthongtin.Controls.OfType<TextBoxBase>())
+            if (txtStudentID.Text != "")
             {
-                if (i.Name != "txtBranch")
+                foreach (TextBoxBase i in grbthongtin.Controls.OfType<TextBoxBase>())
                 {
-                    i.ReadOnly = false;
+                    if (i.Name != "txtBranch" && i.Name != "txtStudentID")
+                    {
+                        i.ReadOnly = false;
+                    }
+                }
+                foreach (ComboBox i in grbthongtin.Controls.OfType<ComboBox>())
+                {
+                    i.Enabled = true;
                 }
 
+                foreach (DateTimePicker i in grbthongtin.Controls.OfType<DateTimePicker>())
+                {
+                    i.Enabled = true;
+                }
+                btnSave.Enabled = true;
+                btnCancel.Enabled = true;
             }
-
-            foreach (ComboBox i in grbthongtin.Controls.OfType<ComboBox>())
-            {
-                i.Enabled = true;
-            }
-
-            foreach (DateTimePicker i in grbthongtin.Controls.OfType<DateTimePicker>())
-            {
-                i.Enabled = true;
-            }
-            btnSave.Enabled = true;
         }
 
         private void gridviewdssv_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -286,16 +291,24 @@ namespace btlWin1
                 MessageBox.Show("Sinh viên có mã sinh viên này không tồn tại", "Thông báo");
             }
             con.Close();
-            txtStudentID.Text = string.Empty;
-            txtName.Text = string.Empty;
-            dateTimePickerBirth.Value = DateTime.Now;
-            cBoxGender.Items.Clear();
-            txtPhone.Text = string.Empty;
-            txtEmail.Text = string.Empty;
-            txtAddress.Text = string.Empty;
-            txtGPA.Text = string.Empty;
+            foreach (TextBoxBase i in grbthongtin.Controls.OfType<TextBoxBase>())
+            {
+                if (i.Name != "txtBranch" && i.Name != "txtStudentID")
+                {
+                    i.ReadOnly = true;
+                }
+            }
+            foreach (ComboBox i in grbthongtin.Controls.OfType<ComboBox>())
+            {
+                i.Enabled = false;
+            }
 
-            main_Load(sender, e);
+            foreach (DateTimePicker i in grbthongtin.Controls.OfType<DateTimePicker>())
+            {
+                i.Enabled = false;
+            }
+            btnSave.Enabled = false;
+            btnCancel.Enabled = false;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -574,7 +587,7 @@ namespace btlWin1
             con.Close();
         }
 
-        float GPAFrom , GPATo ;
+        float GPAFrom, GPATo;
         private void cBoxGPAFrom_SelectedIndexChanged(object sender, EventArgs e)
         {
             con.Open();
@@ -696,20 +709,54 @@ namespace btlWin1
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            cBoxFilter.Items.Clear();
-            cBoxFilter.Text = string.Empty;
-            txtSearch.Clear();
-            txtStudentID.Clear();
-            txtName.Clear();
-            cBoxGender.Items.Clear();
-            cBoxSearch.Items.Clear();
-            txtEmail.Clear();
-            txtAddress.Clear();
-            txtPhone.Clear();
-            txtBranch.Clear();
-            txtGPA.Clear();
-            main_Load(sender, e);
+            foreach (TextBoxBase i in grbthongtin.Controls.OfType<TextBoxBase>())
+            {
+                if (i.Name != "txtBranch")
+                {
+                    i.ReadOnly = true;
+                }
 
+            }
+
+            foreach (ComboBox i in grbthongtin.Controls.OfType<ComboBox>())
+            {
+                i.Enabled = false;
+            }
+
+            foreach (DateTimePicker i in grbthongtin.Controls.OfType<DateTimePicker>())
+            {
+                i.Enabled = false;
+            }
+            btnSave.Enabled = false;
+            int r = gridviewdssv.CurrentRow.Index;
+
+            string? strName = gridviewdssv.Rows[r].Cells[2].Value.ToString();
+            txtName.Text = strName;
+
+            string? strGender = gridviewdssv.Rows[r].Cells[3].Value.ToString();
+            cBoxGender.Text = strGender;
+
+            DateTime? strBirth = Convert.ToDateTime(gridviewdssv.Rows[r].Cells[4].Value.ToString());
+            dateTimePickerBirth.Text = strBirth.ToString();
+
+            string? strPhone = gridviewdssv.Rows[r].Cells[5].Value.ToString();
+            txtPhone.Text = strPhone;
+
+            string? strEmail = gridviewdssv.Rows[r].Cells[6].Value.ToString();
+            txtEmail.Text = strEmail;
+
+            string? strAddress = gridviewdssv.Rows[r].Cells[7].Value.ToString();
+            txtAddress.Text = strAddress;
+
+            string? strClass = gridviewdssv.Rows[r].Cells[8].Value.ToString();
+            cBoxClass.Text = strClass;
+
+            string? strBranch = gridviewdssv.Rows[r].Cells[9].Value.ToString();
+            txtBranch.Text = strBranch;
+
+            string? strGPA = gridviewdssv.Rows[r].Cells[10].Value.ToString();
+            txtGPA.Text = strGPA;
+            btnCancel.Enabled = false;
         }
 
         private void btnClassUpdate_Click(object sender, EventArgs e)
@@ -722,6 +769,7 @@ namespace btlWin1
                 }
             }
             btnClassSave.Enabled = true;
+            btnClassCancel.Enabled = true;
         }
 
         private void btnClassSave_Click(object sender, EventArgs e)
@@ -746,11 +794,15 @@ namespace btlWin1
             }
             con.Close();
 
-            txtClassMa.Text = string.Empty;
-            txtClassName.Text = string.Empty;
-            txtClassID.Text = string.Empty;
-            //txtClassSTT.Text = string.Empty;
-            main_Load(sender, e);
+            foreach (TextBoxBase i in groupBox3.Controls.OfType<TextBoxBase>())
+            {
+                if (i.Name != "txtNumberSV" && i.Name != "txtClassSTT" && i.Name != "txtClassID")
+                {
+                    i.ReadOnly = true;
+                }
+            }
+            btnClassCancel.Enabled = false;
+            btnClassSave.Enabled = false;
         }
 
         private void btnClassRefresh_Click(object sender, EventArgs e)
@@ -758,17 +810,24 @@ namespace btlWin1
             txtClassMa.Text = string.Empty;
             txtClassName.Text = string.Empty;
             txtClassID.Text = string.Empty;
-            //txtClassSTT.Text = string.Empty;
             main_Load(sender, e);
         }
 
         private void btnClassCancel_Click(object sender, EventArgs e)
         {
-            txtClassMa.Text = string.Empty;
-            txtClassName.Text = string.Empty;
-            txtClassID.Text = string.Empty;
-            //txtClassSTT.Text = string.Empty;
-            main_Load(sender, e);
+
+            foreach (TextBoxBase i in groupBox3.Controls.OfType<TextBoxBase>())
+            {
+                if (i.Name != "txtNumberSV" && i.Name != "txtClassSTT" && i.Name != "txtClassID")
+                {
+                    i.ReadOnly = true;
+                }
+            }
+            int r = gridviewClass.CurrentRow.Index;
+            btnClassSave.Enabled = false;
+            btnClassCancel.Enabled = false;
+            txtClassName.Text = gridviewClass.Rows[r].Cells[1].Value.ToString();
+            txtClassMa.Text = gridviewClass.Rows[r].Cells[2].Value.ToString();
         }
 
         private void btnclassadd_Click(object sender, EventArgs e)
@@ -809,23 +868,40 @@ namespace btlWin1
         private void btnClassDel_Click(object sender, EventArgs e)
         {
             con.Open();
-            try
+            if (txtNumberSV.Text != "0")
             {
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = con;
-                cmd.CommandType = CommandType.Text;
-                int r = gridviewClass.CurrentCell.RowIndex;
-                string strName = gridviewClass.Rows[r].Cells[1].Value.ToString();
-                cmd.CommandText = "DELETE FROM [Class] WHERE ClassName = '" + strName + "'";
-                cmd.ExecuteNonQuery();
-                main_Load(sender, e);
+                MessageBox.Show("Không được xóa lớp có sinh viên", "Thông báo");
             }
-            catch (SqlException)
+            else
             {
+                try
+                {
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.Connection = con;
+                    cmd.CommandType = CommandType.Text;
+                    int r = gridviewClass.CurrentCell.RowIndex;
+                    string strName = gridviewClass.Rows[r].Cells[1].Value.ToString();
+                    cmd.CommandText = "DELETE FROM [Class] WHERE ClassName = '" + strName + "'";
+                    cmd.ExecuteNonQuery();
+                    main_Load(sender, e);
+                }
+                catch (SqlException)
+                {
 
-                MessageBox.Show("Có lỗi xảy ra. Vui lòng kiểm tra lại", "Thông báo");
+                    MessageBox.Show("Có lỗi xảy ra. Vui lòng kiểm tra lại", "Thông báo");
+                }
             }
             con.Close();
+        }
+
+        private void grbchucnang_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gridviewClass_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

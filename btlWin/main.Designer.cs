@@ -71,6 +71,8 @@
             txtSearch = new TextBox();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            label21 = new Label();
+            label15 = new Label();
             cBoxGPATo = new ComboBox();
             cBoxGPAFrom = new ComboBox();
             cBoxSearchClass = new ComboBox();
@@ -97,8 +99,6 @@
             btnClassCancel = new Button();
             btnClassUpdate = new Button();
             btnClassSave = new Button();
-            label15 = new Label();
-            label21 = new Label();
             grbdanhsach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)gridviewdssv).BeginInit();
             grbchucnang.SuspendLayout();
@@ -136,6 +136,10 @@
             // 
             // gridviewdssv
             // 
+            gridviewdssv.AllowUserToAddRows = false;
+            gridviewdssv.AllowUserToDeleteRows = false;
+            gridviewdssv.AllowUserToResizeColumns = false;
+            gridviewdssv.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = SystemColors.Control;
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -179,6 +183,7 @@
             grbchucnang.TabIndex = 2;
             grbchucnang.TabStop = false;
             grbchucnang.Text = "Chức Năng";
+            grbchucnang.Enter += grbchucnang_Enter;
             // 
             // btnCancel
             // 
@@ -500,6 +505,7 @@
             // 
             // cBoxFilter
             // 
+            cBoxFilter.DropDownStyle = ComboBoxStyle.DropDownList;
             cBoxFilter.FormattingEnabled = true;
             cBoxFilter.Location = new Point(908, 37);
             cBoxFilter.Name = "cBoxFilter";
@@ -554,6 +560,24 @@
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Sinh Viên";
             tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.Location = new Point(1145, 12);
+            label21.Name = "label21";
+            label21.Size = new Size(51, 15);
+            label21.TabIndex = 13;
+            label21.Text = "Lớn hơn";
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Location = new Point(1237, 12);
+            label15.Name = "label15";
+            label15.Size = new Size(54, 15);
+            label15.TabIndex = 13;
+            label15.Text = "Nhỏ hơn";
             // 
             // cBoxGPATo
             // 
@@ -758,6 +782,11 @@
             // 
             // gridviewClass
             // 
+            gridviewClass.AllowUserToAddRows = false;
+            gridviewClass.AllowUserToDeleteRows = false;
+            gridviewClass.AllowUserToOrderColumns = true;
+            gridviewClass.AllowUserToResizeColumns = false;
+            gridviewClass.AllowUserToResizeRows = false;
             gridviewClass.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             gridviewClass.Location = new Point(3, 19);
             gridviewClass.Name = "gridviewClass";
@@ -766,6 +795,7 @@
             gridviewClass.Size = new Size(556, 278);
             gridviewClass.TabIndex = 7;
             gridviewClass.CellClick += gridviewClass_CellClick;
+            gridviewClass.CellContentClick += gridviewClass_CellContentClick;
             // 
             // btnClassDel
             // 
@@ -821,24 +851,6 @@
             btnClassSave.UseVisualStyleBackColor = true;
             btnClassSave.Click += btnClassSave_Click;
             btnClassSave.MouseHover += btnClassSave_MouseHover;
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Location = new Point(1237, 12);
-            label15.Name = "label15";
-            label15.Size = new Size(54, 15);
-            label15.TabIndex = 13;
-            label15.Text = "Nhỏ hơn";
-            // 
-            // label21
-            // 
-            label21.AutoSize = true;
-            label21.Location = new Point(1145, 12);
-            label21.Name = "label21";
-            label21.Size = new Size(51, 15);
-            label21.TabIndex = 13;
-            label21.Text = "Lớn hơn";
             // 
             // main
             // 

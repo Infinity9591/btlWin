@@ -42,9 +42,9 @@ namespace btlWin1
         private void btnAdd_Click(object sender, EventArgs e)
         {
             cmd = new SqlCommand();
-
-            con.Open();
-            cmd.Connection = con;
+            float checkGPA;
+            int checkPhone;
+            int checkID;
             string? strMSV = txtStudentID.Text;
             string? strName = txtName.Text;
             string? strPhone = txtPhone.Text;
@@ -56,10 +56,39 @@ namespace btlWin1
             string strGPA = (txtGPA.Text);
             if (strMSV == "" || strName == "" || strPhone == "" || strGender == "" || strGPA == "" || strEmail == "")
             {
+                errorGPA.Clear();
+                errorPhone.Clear();
+                errorID.Clear();
                 MessageBox.Show("Nhập đầy đủ thông tin sinh viên");
-            } 
+            }
+            else if (!int.TryParse(txtStudentID.Text.ToString(), out checkID))
+            {
+                errorGPA.Clear();
+                errorID.Clear();
+                errorPhone.Clear();
+                errorID.SetError(txtStudentID, "Nhập mã sinh viên không được có kí tự khác số");
+            }
+            else if (!float.TryParse(txtGPA.Text.ToString(), out checkGPA))
+            {
+                errorGPA.Clear();
+                errorID.Clear();
+                errorPhone.Clear();
+                errorGPA.SetError(txtGPA, "Nhập điểm là số thực");
+            }
+            else if (!int.TryParse(txtPhone.Text.ToString(), out checkPhone))
+            {
+                errorGPA.Clear();
+                errorID.Clear();
+                errorPhone.Clear();
+                errorPhone.SetError(txtPhone, "Nhập số điện thoại không được có kí tự khác số");
+            }
             else
             {
+                con.Open();
+                cmd.Connection = con;
+                errorGPA.Clear();
+                errorPhone.Clear();
+                errorID.Clear();
                 cmd.CommandText = "SELECT * FROM [Student] WHERE ID = '" + strMSV + "'";
                 dr = cmd.ExecuteReader();
                 if (dr.Read())
@@ -90,9 +119,8 @@ namespace btlWin1
                     }
                 }
             }
-            
             con.Close();
-            
+
         }
 
         private void cBoxClass_SelectedIndexChanged(object sender, EventArgs e)
