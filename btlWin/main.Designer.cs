@@ -207,7 +207,7 @@
             // 
             // btnReset
             // 
-            btnReset.Location = new Point(169, 154);
+            btnReset.Location = new Point(46, 154);
             btnReset.Name = "btnReset";
             btnReset.Size = new Size(86, 36);
             btnReset.TabIndex = 0;
@@ -793,6 +793,7 @@
             gridviewClass.AllowUserToResizeRows = false;
             gridviewClass.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             gridviewClass.Location = new Point(3, 19);
+            gridviewClass.MultiSelect = false;
             gridviewClass.Name = "gridviewClass";
             gridviewClass.RowTemplate.Height = 25;
             gridviewClass.SelectionMode = DataGridViewSelectionMode.FullRowSelect;

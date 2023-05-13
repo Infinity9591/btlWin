@@ -287,7 +287,6 @@ namespace btlWin1
                 command.Connection = con;
                 command.CommandText = "UPDATE Student SET [Name] = N'" + strName + "' , Sex =N'" + strGender + "' , Birth ='" + dateTime + "' , Email =' " + strEmail + "' , [Address] =N'" + strAddress + "' , Phone ='" + strPhone + "', GPA ='" + strGPA + "' , ClassID = '" + (cBoxClass.SelectedIndex + 1) + "' WHERE ID = '" + strMSV + "'";
                 command.ExecuteNonQuery();
-                MessageBox.Show("Cập nhật thành công!", "Success", MessageBoxButtons.OK);
                 SqlDataAdapter da = new SqlDataAdapter("select * from studentview", con);
                 da.Fill(dt);
                 gridviewdssv.DataSource = dt;
@@ -927,6 +926,11 @@ namespace btlWin1
         }
 
         private void gridviewClass_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }
