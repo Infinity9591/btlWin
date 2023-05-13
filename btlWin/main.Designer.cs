@@ -187,7 +187,7 @@
             // 
             // btnCancel
             // 
-            btnCancel.Location = new Point(46, 154);
+            btnCancel.Location = new Point(169, 151);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(86, 36);
             btnCancel.TabIndex = 1;
@@ -207,7 +207,7 @@
             // 
             // btnReset
             // 
-            btnReset.Location = new Point(169, 154);
+            btnReset.Location = new Point(46, 151);
             btnReset.Name = "btnReset";
             btnReset.Size = new Size(86, 36);
             btnReset.TabIndex = 0;

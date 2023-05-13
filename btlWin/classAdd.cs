@@ -33,7 +33,7 @@ namespace btlWin1
             string? strName = txtClassName.Text;
             SqlCommand cmdCount = new SqlCommand();
             cmdCount.Connection = con;
-            cmdCount.CommandText = "SELECT COUNT(ID) FROM [Class]";
+            cmdCount.CommandText = "SELECT MAX(ID) FROM [Class]";
             Int32 count = (Int32)cmdCount.ExecuteScalar();
             if (strName == "" || strMa == "")
             {

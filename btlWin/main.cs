@@ -33,6 +33,7 @@ namespace btlWin1
             DataTable dt = new DataTable();
             DataTable dtClassCBox = new DataTable();
             DataTable dtClasscBoxSearch = new DataTable();
+            cBoxFilter.Items.Clear();
             try
             {
                 SqlDataAdapter da = new SqlDataAdapter("select * from studentview", con);
@@ -105,6 +106,7 @@ namespace btlWin1
             dateTimePickerBirth.CustomFormat = "dd/MM/yyyy";
             dateTimePickerBirth.Format = DateTimePickerFormat.Custom;
             dateTimePickerBirth.Text = string.Empty;
+            //cBoxFilter.Items.Clear();
             txtSearch.Show();
             cBoxSearch.Hide();
             cBoxSearchClass.Hide();
@@ -262,6 +264,7 @@ namespace btlWin1
         private void btnSave_Click(object sender, EventArgs e)
         {
             con.Open();
+            DataTable dt = new DataTable();
             SqlCommand cmdUpdateStudent = new SqlCommand();
             cmdUpdateStudent.Connection = con;
             string? strMSV = txtStudentID.Text;
@@ -273,6 +276,7 @@ namespace btlWin1
             string? strEmail = txtEmail.Text;
             string? strAddress = txtAddress.Text;
             float? strGPA = float.Parse(txtGPA.Text);
+            int r = gridviewdssv.CurrentRow.Index;
             cmdUpdateStudent.CommandText = "SELECT * FROM [Student] WHERE ID = '" + strMSV + "'";
             dr = cmdUpdateStudent.ExecuteReader();
 
@@ -284,6 +288,15 @@ namespace btlWin1
                 command.CommandText = "UPDATE Student SET [Name] = N'" + strName + "' , Sex =N'" + strGender + "' , Birth ='" + dateTime + "' , Email =' " + strEmail + "' , [Address] =N'" + strAddress + "' , Phone ='" + strPhone + "', GPA ='" + strGPA + "' , ClassID = '" + (cBoxClass.SelectedIndex + 1) + "' WHERE ID = '" + strMSV + "'";
                 command.ExecuteNonQuery();
                 MessageBox.Show("Cập nhật thành công!", "Success", MessageBoxButtons.OK);
+                SqlDataAdapter da = new SqlDataAdapter("select * from studentview", con);
+                da.Fill(dt);
+                gridviewdssv.DataSource = dt;
+                gridviewdssv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                gridviewdssv.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                gridviewdssv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                gridviewdssv.Columns["STT"].Width = 50;
+                gridviewdssv.Columns[4].DefaultCellStyle.Format = "dd/MM/yyyy";
+                gridviewdssv.Rows[r].Selected = true;
             }
             else
             {
@@ -309,6 +322,7 @@ namespace btlWin1
             }
             btnSave.Enabled = false;
             btnCancel.Enabled = false;
+
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -775,12 +789,14 @@ namespace btlWin1
         private void btnClassSave_Click(object sender, EventArgs e)
         {
             con.Open();
+            DataTable dtClass = new DataTable();
             SqlCommand cmdUpdateClass = new SqlCommand();
             cmdUpdateClass.Connection = con;
             string strName = txtClassName.Text.ToString();
             string strBranch = txtClassMa.Text.ToString();
             string strID = txtClassID.Text.ToString();
             cmdUpdateClass.CommandText = "SELECT * FROM [Class] WHERE ID = '" + strID + "'";
+            int r = gridviewClass.CurrentRow.Index;
             dr = cmdUpdateClass.ExecuteReader();
 
             if (dr.Read())
@@ -791,6 +807,15 @@ namespace btlWin1
                 command.CommandText = "UPDATE [Class] SET ClassName = N'" + strName + "', BranchName = N'" + strBranch + "' WHERE ID = '" + strID + "'";
                 command.ExecuteNonQuery();
                 MessageBox.Show("Cập nhật thành công!", "Success", MessageBoxButtons.OK);
+                SqlDataAdapter daClass = new SqlDataAdapter("select * from classview", con);
+                daClass.Fill(dtClass);
+                gridviewClass.DataSource = dtClass;
+                gridviewClass.Columns[0].Width = 50;
+                gridviewClass.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                gridviewClass.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                gridviewClass.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                gridviewClass.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                gridviewClass.Rows[r].Selected = true;
             }
             con.Close();
 
@@ -881,8 +906,9 @@ namespace btlWin1
                     cmd.CommandType = CommandType.Text;
                     int r = gridviewClass.CurrentCell.RowIndex;
                     string strName = gridviewClass.Rows[r].Cells[1].Value.ToString();
-                    cmd.CommandText = "DELETE FROM [Class] WHERE ClassName = '" + strName + "'";
+                    cmd.CommandText = "DELETE FROM [Class] WHERE ClassName = N'" + strName + "'";
                     cmd.ExecuteNonQuery();
+
                     main_Load(sender, e);
                 }
                 catch (SqlException)

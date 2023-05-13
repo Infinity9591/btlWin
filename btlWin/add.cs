@@ -19,6 +19,7 @@ namespace btlWin1
         private void add_Load(object sender, EventArgs e)
         {
             DataTable dtClass = new DataTable();
+            txtStudentID.Focus();
             try
             {
                 SqlDataAdapter daClass = new SqlDataAdapter("select * from Class", con);
