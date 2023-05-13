@@ -86,6 +86,7 @@
             // label13
             // 
             label13.AutoSize = true;
+            label13.BackColor = Color.Transparent;
             label13.Location = new Point(669, 142);
             label13.Name = "label13";
             label13.Size = new Size(35, 15);
@@ -102,6 +103,7 @@
             // label12
             // 
             label12.AutoSize = true;
+            label12.BackColor = Color.Transparent;
             label12.Location = new Point(669, 88);
             label12.Name = "label12";
             label12.Size = new Size(43, 15);
@@ -111,6 +113,7 @@
             // label11
             // 
             label11.AutoSize = true;
+            label11.BackColor = Color.Transparent;
             label11.Location = new Point(669, 35);
             label11.Name = "label11";
             label11.Size = new Size(27, 15);
@@ -120,6 +123,7 @@
             // label8
             // 
             label8.AutoSize = true;
+            label8.BackColor = Color.Transparent;
             label8.Location = new Point(367, 32);
             label8.Name = "label8";
             label8.Size = new Size(52, 15);
@@ -136,6 +140,7 @@
             // label10
             // 
             label10.AutoSize = true;
+            label10.BackColor = Color.Transparent;
             label10.Location = new Point(367, 147);
             label10.Name = "label10";
             label10.Size = new Size(43, 15);
@@ -152,6 +157,7 @@
             // label7
             // 
             label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
             label7.Location = new Point(367, 91);
             label7.Name = "label7";
             label7.Size = new Size(36, 15);
@@ -161,6 +167,7 @@
             // label9
             // 
             label9.AutoSize = true;
+            label9.BackColor = Color.Transparent;
             label9.Location = new Point(39, 150);
             label9.Name = "label9";
             label9.Size = new Size(59, 15);
@@ -177,6 +184,7 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.BackColor = Color.Transparent;
             label6.Location = new Point(39, 91);
             label6.Name = "label6";
             label6.Size = new Size(59, 15);
@@ -193,6 +201,7 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
             label5.Location = new Point(39, 29);
             label5.Name = "label5";
             label5.Size = new Size(76, 15);
@@ -202,6 +211,7 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Location = new Point(979, 35);
             label1.Name = "label1";
             label1.Size = new Size(27, 15);
@@ -217,9 +227,9 @@
             // 
             // btnAdd
             // 
-            btnAdd.Location = new Point(1094, 121);
+            btnAdd.Location = new Point(1032, 109);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(86, 36);
+            btnAdd.Size = new Size(173, 56);
             btnAdd.TabIndex = 22;
             btnAdd.Text = "Thêm";
             btnAdd.UseVisualStyleBackColor = true;
@@ -257,6 +267,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Menu;
             ClientSize = new Size(1291, 206);
             Controls.Add(dateTimePickerBirth);
             Controls.Add(labelError);

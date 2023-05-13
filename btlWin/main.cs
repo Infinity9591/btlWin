@@ -144,7 +144,7 @@ namespace btlWin1
             catch (SqlException)
             {
 
-                MessageBox.Show("Có lỗi xảy ra. Vui lòng kiểm tra lại", "Thông báo");
+                MessageBox.Show("Có lỗi xảy ra. Vui lòng kiểm tra lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             con.Close();
         }
@@ -297,6 +297,7 @@ namespace btlWin1
                 gridviewdssv.Columns["STT"].Width = 50;
                 gridviewdssv.Columns[4].DefaultCellStyle.Format = "dd/MM/yyyy";
                 gridviewdssv.Rows[r].Selected = true;
+                MessageBox.Show("Cập nhật thành công!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -914,7 +915,7 @@ namespace btlWin1
                 catch (SqlException)
                 {
 
-                    MessageBox.Show("Có lỗi xảy ra. Vui lòng kiểm tra lại", "Thông báo");
+                    MessageBox.Show("Có lỗi xảy ra. Vui lòng kiểm tra lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             con.Close();

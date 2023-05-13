@@ -187,7 +187,7 @@
             // 
             // btnCancel
             // 
-            btnCancel.Location = new Point(169, 151);
+            btnCancel.Location = new Point(169, 154);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(86, 36);
             btnCancel.TabIndex = 1;
@@ -207,7 +207,7 @@
             // 
             // btnReset
             // 
-            btnReset.Location = new Point(46, 151);
+            btnReset.Location = new Point(169, 154);
             btnReset.Name = "btnReset";
             btnReset.Size = new Size(86, 36);
             btnReset.TabIndex = 0;
@@ -635,6 +635,8 @@
             // 
             // tabPage2
             // 
+            tabPage2.BackColor = SystemColors.ButtonFace;
+            tabPage2.BackgroundImageLayout = ImageLayout.Stretch;
             tabPage2.Controls.Add(groupBox3);
             tabPage2.Controls.Add(groupBox2);
             tabPage2.Controls.Add(groupBox1);
@@ -644,10 +646,10 @@
             tabPage2.Size = new Size(1338, 703);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Lớp";
-            tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
+            groupBox3.BackColor = SystemColors.ButtonFace;
             groupBox3.Controls.Add(label18);
             groupBox3.Controls.Add(label17);
             groupBox3.Controls.Add(label16);
@@ -734,6 +736,7 @@
             // 
             // groupBox2
             // 
+            groupBox2.BackColor = SystemColors.Control;
             groupBox2.Controls.Add(label19);
             groupBox2.Location = new Point(213, 561);
             groupBox2.Name = "groupBox2";
@@ -755,6 +758,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.BackColor = SystemColors.Control;
             groupBox1.Controls.Add(btnClassRefresh);
             groupBox1.Controls.Add(gridviewClass);
             groupBox1.Controls.Add(btnClassDel);

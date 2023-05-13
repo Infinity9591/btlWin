@@ -52,7 +52,7 @@ INSERT INTO Student VALUES (90435, N'Nguyễn Thành Đạt', N'Nữ', '20220102
 drop view if EXISTS classview 
 go
 create view classview as
-select ID as N'STT', ClassName as N'Tên Lớp' , BranchName as N'Tên Ngành'
+select ID as N'ID', ClassName as N'Tên Lớp' , BranchName as N'Tên Ngành'
 from Class
 go
 
@@ -76,3 +76,7 @@ select coalesce ((select COUNT(*)
 from class inner join student on Class.ID = Student.ClassID
 where ClassName = 'CNT61DH'
 group by ClassName), 0)
+
+SELECT max(ID) FROM Class
+
+select * from class

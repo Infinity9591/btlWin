@@ -60,13 +60,14 @@ namespace btlWin1
                 errorGPA.Clear();
                 errorPhone.Clear();
                 errorID.Clear();
-                MessageBox.Show("Nhập đầy đủ thông tin sinh viên");
+                MessageBox.Show("Nhập đầy đủ thông tin sinh viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (!int.TryParse(txtStudentID.Text.ToString(), out checkID))
             {
                 errorGPA.Clear();
                 errorID.Clear();
                 errorPhone.Clear();
+                errorID.SetIconPadding(txtStudentID, 8);
                 errorID.SetError(txtStudentID, "Nhập mã sinh viên không được có kí tự khác số");
             }
             else if (!float.TryParse(txtGPA.Text.ToString(), out checkGPA))
@@ -74,6 +75,7 @@ namespace btlWin1
                 errorGPA.Clear();
                 errorID.Clear();
                 errorPhone.Clear();
+                errorGPA.SetIconPadding(txtGPA, 8);
                 errorGPA.SetError(txtGPA, "Nhập điểm là số thực");
             }
             else if (!int.TryParse(txtPhone.Text.ToString(), out checkPhone))
@@ -81,6 +83,7 @@ namespace btlWin1
                 errorGPA.Clear();
                 errorID.Clear();
                 errorPhone.Clear();
+                errorPhone.SetIconPadding(txtPhone, 8);
                 errorPhone.SetError(txtPhone, "Nhập số điện thoại không được có kí tự khác số");
             }
             else
@@ -113,7 +116,7 @@ namespace btlWin1
                     command.Parameters.AddWithValue("GPA", strGPA);
                     command.Parameters.AddWithValue("ClassID", idClass);
                     command.ExecuteNonQuery();
-                    var rs = MessageBox.Show("Thêm sinh viên thành công!", "Success", MessageBoxButtons.OK);
+                    var rs = MessageBox.Show("Thêm sinh viên thành công!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     if (rs == DialogResult.OK)
                     {
                         this.Close();

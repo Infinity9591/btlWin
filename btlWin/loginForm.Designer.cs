@@ -28,146 +28,160 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.labelToRegister = new System.Windows.Forms.LinkLabel();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.labelError = new System.Windows.Forms.Label();
-            this.btnhide = new System.Windows.Forms.Button();
-            this.btnshow = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(loginForm));
+            btnLogin = new Button();
+            txtPassword = new TextBox();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            labelToRegister = new LinkLabel();
+            txtUsername = new TextBox();
+            errorProvider1 = new ErrorProvider(components);
+            labelError = new Label();
+            btnhide = new Button();
+            btnshow = new Button();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // btnLogin
             // 
-            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnLogin.Location = new System.Drawing.Point(154, 183);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(92, 44);
-            this.btnLogin.TabIndex = 13;
-            this.btnLogin.Text = "Đăng nhập";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            btnLogin.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnLogin.Location = new Point(153, 170);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(92, 44);
+            btnLogin.TabIndex = 13;
+            btnLogin.Text = "Đăng nhập";
+            btnLogin.UseVisualStyleBackColor = true;
+            btnLogin.Click += btnLogin_Click;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(190, 105);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(142, 23);
-            this.txtPassword.TabIndex = 8;
+            txtPassword.Location = new Point(190, 105);
+            txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
+            txtPassword.Size = new Size(142, 23);
+            txtPassword.TabIndex = 8;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(46, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 21);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Tên đăng nhập";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(46, 47);
+            label1.Name = "label1";
+            label1.Size = new Size(116, 21);
+            label1.TabIndex = 9;
+            label1.Text = "Tên đăng nhập";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(46, 103);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 21);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Mật khẩu";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(46, 103);
+            label2.Name = "label2";
+            label2.Size = new Size(77, 21);
+            label2.TabIndex = 10;
+            label2.Text = "Mật khẩu";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(65, 239);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 15);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Chưa có tài khoản?";
+            label3.AutoSize = true;
+            label3.Location = new Point(65, 239);
+            label3.Name = "label3";
+            label3.Size = new Size(108, 15);
+            label3.TabIndex = 11;
+            label3.Text = "Chưa có tài khoản?";
             // 
             // labelToRegister
             // 
-            this.labelToRegister.AutoSize = true;
-            this.labelToRegister.Location = new System.Drawing.Point(229, 239);
-            this.labelToRegister.Name = "labelToRegister";
-            this.labelToRegister.Size = new System.Drawing.Size(76, 15);
-            this.labelToRegister.TabIndex = 12;
-            this.labelToRegister.TabStop = true;
-            this.labelToRegister.Text = "Đăng kí ngay";
-            this.labelToRegister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.labelToRegister_LinkClicked);
+            labelToRegister.AutoSize = true;
+            labelToRegister.Location = new Point(229, 239);
+            labelToRegister.Name = "labelToRegister";
+            labelToRegister.Size = new Size(76, 15);
+            labelToRegister.TabIndex = 12;
+            labelToRegister.TabStop = true;
+            labelToRegister.Text = "Đăng kí ngay";
+            labelToRegister.LinkClicked += labelToRegister_LinkClicked;
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(190, 49);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(176, 23);
-            this.txtUsername.TabIndex = 7;
+            txtUsername.Location = new Point(190, 49);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(176, 23);
+            txtUsername.TabIndex = 7;
             // 
             // errorProvider1
             // 
-            this.errorProvider1.BlinkRate = 0;
-            this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
-            this.errorProvider1.ContainerControl = this;
+            errorProvider1.BlinkRate = 0;
+            errorProvider1.BlinkStyle = ErrorBlinkStyle.NeverBlink;
+            errorProvider1.ContainerControl = this;
             // 
             // labelError
             // 
-            this.labelError.AutoSize = true;
-            this.labelError.ForeColor = System.Drawing.Color.Red;
-            this.labelError.Location = new System.Drawing.Point(80, 153);
-            this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(0, 15);
-            this.labelError.TabIndex = 14;
+            labelError.AutoSize = true;
+            labelError.ForeColor = Color.Red;
+            labelError.Location = new Point(80, 153);
+            labelError.Name = "labelError";
+            labelError.Size = new Size(0, 15);
+            labelError.TabIndex = 14;
             // 
             // btnhide
             // 
-            this.btnhide.Location = new System.Drawing.Point(338, 105);
-            this.btnhide.Name = "btnhide";
-            this.btnhide.Size = new System.Drawing.Size(28, 23);
-            this.btnhide.TabIndex = 15;
-            this.btnhide.Text = "H";
-            this.btnhide.UseVisualStyleBackColor = true;
-            this.btnhide.Click += new System.EventHandler(this.btnhide_Click);
+            btnhide.Location = new Point(338, 105);
+            btnhide.Name = "btnhide";
+            btnhide.Size = new Size(28, 23);
+            btnhide.TabIndex = 15;
+            btnhide.Text = "H";
+            btnhide.UseVisualStyleBackColor = true;
+            btnhide.Click += btnhide_Click;
             // 
             // btnshow
             // 
-            this.btnshow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnshow.Location = new System.Drawing.Point(338, 105);
-            this.btnshow.Name = "btnshow";
-            this.btnshow.Size = new System.Drawing.Size(28, 23);
-            this.btnshow.TabIndex = 16;
-            this.btnshow.Text = "S";
-            this.btnshow.UseVisualStyleBackColor = true;
-            this.btnshow.Click += new System.EventHandler(this.btnshow_Click);
+            btnshow.BackgroundImageLayout = ImageLayout.Stretch;
+            btnshow.Location = new Point(338, 105);
+            btnshow.Name = "btnshow";
+            btnshow.Size = new Size(28, 23);
+            btnshow.TabIndex = 16;
+            btnshow.Text = "S";
+            btnshow.UseVisualStyleBackColor = true;
+            btnshow.Click += btnshow_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(46, 164);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(50, 50);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 17;
+            pictureBox1.TabStop = false;
             // 
             // loginForm
             // 
-            this.AcceptButton = this.btnLogin;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(409, 280);
-            this.Controls.Add(this.btnshow);
-            this.Controls.Add(this.btnhide);
-            this.Controls.Add(this.labelError);
-            this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.labelToRegister);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txtUsername);
-            this.Name = "loginForm";
-            this.Text = "Đăng nhập";
-            this.Load += new System.EventHandler(this.loginForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AcceptButton = btnLogin;
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(409, 280);
+            Controls.Add(pictureBox1);
+            Controls.Add(btnshow);
+            Controls.Add(btnhide);
+            Controls.Add(labelError);
+            Controls.Add(btnLogin);
+            Controls.Add(labelToRegister);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(txtPassword);
+            Controls.Add(txtUsername);
+            Name = "loginForm";
+            Text = "Đăng nhập";
+            Load += loginForm_Load;
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -183,5 +197,6 @@
         private Label labelError;
         private Button btnshow;
         private Button btnhide;
+        private PictureBox pictureBox1;
     }
 }
