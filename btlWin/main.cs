@@ -142,7 +142,7 @@ namespace btlWin1
             catch (SqlException)
             {
 
-                MessageBox.Show("Có lỗi xảy ra. Vui lòng kiểm tra lại", "Thông báo");
+                MessageBox.Show("Có lỗi xảy ra. Vui lòng kiểm tra lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             con.Close();
         }
@@ -283,7 +283,7 @@ namespace btlWin1
                 command.Connection = con;
                 command.CommandText = "UPDATE Student SET [Name] = N'" + strName + "' , Sex =N'" + strGender + "' , Birth ='" + dateTime + "' , Email =' " + strEmail + "' , [Address] =N'" + strAddress + "' , Phone ='" + strPhone + "', GPA ='" + strGPA + "' , ClassID = '" + (cBoxClass.SelectedIndex + 1) + "' WHERE ID = '" + strMSV + "'";
                 command.ExecuteNonQuery();
-                MessageBox.Show("Cập nhật thành công!", "Success", MessageBoxButtons.OK);
+                MessageBox.Show("Cập nhật thành công!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -881,14 +881,14 @@ namespace btlWin1
                     cmd.CommandType = CommandType.Text;
                     int r = gridviewClass.CurrentCell.RowIndex;
                     string strName = gridviewClass.Rows[r].Cells[1].Value.ToString();
-                    cmd.CommandText = "DELETE FROM [Class] WHERE ClassName = '" + strName + "'";
+                    cmd.CommandText = "DELETE FROM [Class] WHERE ClassName = N'" + strName + "'";
                     cmd.ExecuteNonQuery();
                     main_Load(sender, e);
                 }
                 catch (SqlException)
                 {
 
-                    MessageBox.Show("Có lỗi xảy ra. Vui lòng kiểm tra lại", "Thông báo");
+                    MessageBox.Show("Có lỗi xảy ra. Vui lòng kiểm tra lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             con.Close();
