@@ -59,7 +59,6 @@ INSERT INTO Student VALUES (93644, N'Phạm Minh Hiền', N'Nữ', '20030128', 7
 INSERT INTO Student VALUES (94365, N'Phạm Thành Công', N'Nam', '20030311', 287314329, 'ctd@gmail.com', N'Số 58 Định Thiên Hoàng', 7, 1)
 INSERT INTO Student VALUES (97456, N'Đào Mai Trang', N'Nữ', '20030612', 371498221, 'gtn@gmail.com', N'Số 69 Nguyễn Thượng Huyền', 4.5, 2)
 INSERT INTO Student VALUES (92523, N'Đinh Thu Thủy', N'Nữ', '20021112', 712341234, 'poa@gmail.com', N'Số 92 Phạm Phú Thứ', 2.5, 3)
-INSERT INTO Student VALUES (91342, N'Bùi Huy Hoàng', N'Nam', '20020701', 835782123, 'mla@gmail.com', N'Số 131 Hàm Nghi', 6.5, 3)
 
 drop view if EXISTS classview 
 go
